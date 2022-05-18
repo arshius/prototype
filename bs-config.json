@@ -1,0 +1,9 @@
+{
+    "injectChanges": true,
+    "files": [
+        "./public/**/*.{html,htm,css,js}"
+    ],
+    "server": {
+        "baseDir": "./public"
+    }
+}

@@ -1,0 +1,150 @@
+@use "../tokens/token" as *;
+
+$themes: (
+    "purple": purple,
+    "blue": deepskyblue,
+    "green": limegreen,
+    "red": red,
+    "gray": lightslategrey,
+);
+
+[app-home] {
+    --bgc: #{$neutral};
+    --nav-fc: #{$primary-accent};
+    --nav-bgc: #{$neutral-accent};
+
+    display: flex;
+    justify-content: center;
+    padding-inline: 0.5em;
+    padding-block: 2.5em;
+
+    @each $name, $color in $themes {
+        .#{$name} {
+            --icon-color: #{$color};
+        }
+        .#{$name}.active {
+            & ~ .indicator {
+                --active-color: #{$color};
+            }
+            & .nav-icon {
+                --icon-color: var(--bgc);
+            }
+        }
+    }
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--nav-bgc);
+        border-radius: 1em;
+        height: 4.375em;
+        padding-inline: 1em;
+        font-size: clamp(0.8rem, 4vw, 1.2rem);
+
+        .nav-item {
+            display: flex;
+            width: 4.375em;
+            aspect-ratio: 1;
+            cursor: pointer;
+            a {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                width: inherit;
+                height: inherit;
+                pointer-events: none;
+            }
+            &.active .nav-icon {
+                transform: translateY(-100%);
+            }
+            &.active .nav-label {
+                transform: translateY(50%);
+                opacity: 1;
+            }
+        }
+        .nav-icon {
+            position: absolute;
+            transition: transform 500ms ease, color 1500ms ease;
+            pointer-events: none;
+            z-index: 10;
+            color: var(--icon-color);
+        }
+        .nav-label {
+            position: absolute;
+            opacity: 0;
+            transition: transform 500ms ease, opacity 500ms ease;
+            transform: translateY(100%);
+            pointer-events: none;
+        }
+        .nav-icon svg {
+            width: 1.5em;
+            aspect-ratio: 1;
+            fill: currentColor;
+            pointer-events: none;
+        }
+        .indicator {
+            --shift: 0%;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 500ms ease, background-color 1000ms ease;
+            transform: translate(var(--shift), -62%);
+            width: 3.5em;
+            aspect-ratio: 1;
+            background-color: var(--active-color);
+            border-radius: 50%;
+            box-shadow: 0 0 0 0.3em var(--bgc);
+            z-index: 1;
+        }
+        .indicator::before {
+            position: absolute;
+            content: "";
+            transform: translate(-183%, 50%);
+            border-radius: 0 50% 0 0;
+            width: 1.5em;
+            aspect-ratio: 1;
+            background-color: transparent;
+            box-shadow: 0px -10px 0 0px var(--bgc);
+        }
+        .indicator::after {
+            position: absolute;
+            content: "";
+            transform: translate(183%, 50%);
+            border-radius: 50% 0 0 0;
+            width: 1.5em;
+            aspect-ratio: 1;
+            background-color: transparent;
+            box-shadow: 0px -10px 0 0px var(--bgc);
+        }
+        .nav-item:nth-child(1) {
+            order: 3;
+        }
+        .nav-item:nth-child(2) {
+            order: 1;
+            &.active ~ .indicator {
+                --shift: -250%;
+            }
+        }
+        .nav-item:nth-child(3) {
+            order: 2;
+            &.active ~ .indicator {
+                --shift: -125%;
+            }
+        }
+        .nav-item:nth-child(4) {
+            order: 4;
+            &.active ~ .indicator {
+                --shift: 125%;
+            }
+        }
+        .nav-item:nth-child(5) {
+            order: 5;
+            &.active ~ .indicator {
+                --shift: 250%;
+            }
+        }
+    }
+}

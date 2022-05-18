@@ -1,0 +1,65 @@
+@use "sass:map";
+@use "../tokens/token" as _token;
+@use "../functions/color" as _fn;
+
+$theme-token: (
+    primary: (
+        _token.$tone-primary,
+        _token.$tone-primary-accent,
+        _token.$tone-primary-inverse,
+        _token.$tone-primary-inverse-accent,
+    ),
+    secondary: (
+        _token.$tone-secondary,
+        _token.$tone-secondary-accent,
+        _token.$tone-secondary-inverse,
+        _token.$tone-secondary-inverse-accent,
+    ),
+    tertiary: (
+        _token.$tone-tertiary,
+        _token.$tone-tertiary-accent,
+        _token.$tone-tertiary-inverse,
+        _token.$tone-tertiary-inverse-accent,
+    ),
+    neutral: (
+        _token.$tone-neutral,
+        _token.$tone-neutral-accent,
+        _token.$tone-neutral-inverse,
+        _token.$tone-neutral-inverse-accent,
+    ),
+    info: (
+        _token.$tone-info,
+        _token.$tone-info-inverse,
+    ),
+    warning: (
+        _token.$tone-warning,
+        _token.$tone-warning-inverse,
+    ),
+    error: (
+        _token.$tone-error,
+        _token.$tone-error-inverse,
+    ),
+    success: (
+        _token.$tone-success,
+        _token.$tone-success-inverse,
+    ),
+);
+
+$theme-color: ();
+@each $color, $tones in $theme-token {
+    @each $tone in $tones {
+        $theme-color: map.merge($theme-color, _fn.getColor($color, $tone));
+    }
+}
+
+:root {
+    @each $name, $color in $theme-color {
+        #{$name}: #{$color};
+    }
+}
+
+html, body {
+    background-color: #{_token.$neutral};
+    min-height: 100vh;
+    font-family: sans-serif;
+}
