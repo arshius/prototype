@@ -1,0 +1,18 @@
+[
+    {
+        "username": "admin",
+        "password": "admin",
+        "firstname": "Jean",
+        "lastname": "Doe",
+        "dob": "14/12/2012",
+        "position": "Supervisor"
+    },
+    {
+        "username": "user",
+        "password": "user",
+        "firstname": "John",
+        "lastname": "Doe",
+        "dob": "14/12/2011",
+        "position": "Mule"
+    }
+  ]

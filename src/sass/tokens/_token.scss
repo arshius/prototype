@@ -1,0 +1,85 @@
+$tone-primary: 700;
+$tone-primary-accent: 300;
+$tone-primary-inverse: 100;
+$tone-primary-inverse-accent: 900;
+
+$tone-secondary: 700;
+$tone-secondary-accent: 300;
+$tone-secondary-inverse: 100;
+$tone-secondary-inverse-accent: 900;
+
+$tone-tertiary: 700;
+$tone-tertiary-accent: 300;
+$tone-tertiary-inverse: 100;
+$tone-tertiary-inverse-accent: 900;
+
+$tone-neutral: 300;
+$tone-neutral-accent: 100;
+$tone-neutral-inverse: 700;
+$tone-neutral-inverse-accent: 900;
+
+$tone-info:500;
+$tone-info-inverse:100;
+$tone-warning:500;
+$tone-warning-inverse:100;
+$tone-error:500;
+$tone-error-inverse:100;
+$tone-success:500;
+$tone-success-inverse:100;
+
+// Color Pallete
+$primary: var(--primary-#{$tone-primary});
+$primary-accent: var(--primary-#{$tone-primary-accent});
+$primary-inverse: var(--primary-#{$tone-primary-inverse});
+$primary-inverse-accent: var(--primary-#{$tone-primary-inverse-accent});
+$on-primary: var(--on-primary-#{$tone-primary});
+$on-primary-accent: var(--on-primary-#{$tone-primary-accent});
+$on-primary-inverse: var(--on-primary-#{$tone-primary-inverse});
+$on-primary-inverse-accent: var(--on-primary-#{$tone-primary-inverse-accent});
+
+$secondary: var(--secondary-#{$tone-secondary});
+$secondary-accent: var(--secondary-#{$tone-secondary-accent});
+$secondary-inverse: var(--secondary-#{$tone-secondary-inverse});
+$secondary-inverse-accent: var(--secondary-#{$tone-secondary-inverse-accent});
+$on-secondary: var(--on-secondary-#{$tone-secondary});
+$on-secondary-accent: var(--on-secondary-#{$tone-secondary-accent});
+$on-secondary-inverse: var(--on-secondary-#{$tone-secondary-inverse});
+$on-secondary-inverse-accent: var(--on-secondary-#{$tone-secondary-inverse-accent});
+
+$tertiary: var(--tertiary-#{$tone-tertiary});
+$tertiary-accent: var(--tertiary-#{$tone-tertiary-accent});
+$tertiary-inverse: var(--tertiary-#{$tone-tertiary-inverse});
+$tertiary-inverse-accent: var(--tertiary-#{$tone-tertiary-inverse-accent});
+$on-tertiary: var(--on-tertiary-#{$tone-tertiary});
+$on-tertiary-accent: var(--on-tertiary-#{$tone-tertiary-accent});
+$on-tertiary-inverse: var(--on-tertiary-#{$tone-tertiary-inverse});
+$on-tertiary-inverse-accent: var(--on-tertiary-#{$tone-tertiary-inverse-accent});
+
+$neutral: var(--neutral-#{$tone-neutral});
+$neutral-accent: var(--neutral-#{$tone-neutral-accent});
+$neutral-inverse: var(--neutral-#{$tone-neutral-inverse});
+$neutral-inverse-accent: var(--neutral-#{$tone-neutral-inverse-accent});
+$on-neutral: var(--on-neutral-#{$tone-neutral});
+$on-neutral-accent: var(--on-neutral-#{$tone-neutral-accent});
+$on-neutral-inverse: var(--on-neutral-#{$tone-neutral-inverse});
+$on-neutral-inverse-accent: var(--on-neutral-#{$tone-neutral-inverse-accent});
+
+$info: var(--info-#{$tone-info});
+$info-inverse: var(--info-#{$tone-info-inverse});
+$on-info: var(--on-info-#{$tone-info});
+$on-info-inverse: var(--on-info-#{$tone-info-inverse});
+
+$warning: var(--warning-#{$tone-warning});
+$warning-inverse: var(--warning-#{$tone-warning-inverse});
+$on-warning: var(--on-warning-#{$tone-warning});
+$on-warning-inverse: var(--on-warning-#{$tone-warning-inverse});
+
+$error: var(--error-#{$tone-error});
+$error-inverse: var(--error-#{$tone-error-inverse});
+$on-error: var(--on-error-#{$tone-error});
+$on-error-inverse: var(--on-error-#{$tone-error-inverse});
+
+$success: var(--success-#{$tone-success});
+$success-inverse: var(--success-#{$tone-success-inverse});
+$on-success: var(--on-success-#{$tone-success});
+$on-success-inverse: var(--on-success-#{$tone-success-inverse});

@@ -1,0 +1,15 @@
+@use "sass:map";
+@use "../ds/color" as _color;
+
+@function getColor($prefix, $tone, $alias: $prefix) {
+    $bgc: map.get(_color.$ds-colors, $prefix);
+    $bgc: map.get($bgc, $tone);
+    $fc: map.get(_color.$ds-colors, on-#{$prefix});
+    $fc: map.get($fc, $tone);
+    $var: (--#{$alias}-#{$tone}: $bgc, --on-#{$alias}-#{$tone}: $fc);
+    @return $var;
+};
+
+@function addColor($map, $color, $tone) {
+    $map: map.merge($map, getColor($color, $tone));
+};

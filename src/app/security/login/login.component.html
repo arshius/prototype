@@ -1,0 +1,77 @@
+<section>
+    <section class="form-root">
+        <div>
+            <h1 class="font-header">Aims</h1>
+            <h5 class="font-content">Accounting & Inventory Management System</h5>
+            <div>
+                <div class="form-wrapper">
+                    <h6 class="font-content">Login into your account</h6>
+                    <div class="form-group font-content">
+                        <label class="sr-only" for="login-username">Enter username</label>
+                        <div class="input-group">
+                            <svg class="icon user">
+                                <use href="#user"></use>
+                            </svg>
+                            <input (focus)="on($event)" (blur)="off($event)" type="text" class="form-control"
+                                id="login-username" autocomplete="off" placeholder="Username">
+                            <label placeholder>Username</label>
+                            <svg class="tooltip icon info">
+                                <use href="#info"></use>
+                            </svg>
+                            <label title="usernameHelp" role="tooltip">Username must not contain any special
+                                characters</label>
+                        </div>
+                    </div>
+                    <div class="form-group font-content">
+                        <label class="sr-only" for="login-password">Enter password</label>
+                        <div class="input-group">
+                            <svg class="icon lock">
+                                <use href="#lock"></use>
+                            </svg>
+                            <input (focus)="on($event)" (blur)="off($event)" type="password" class="form-control"
+                                id="login-password" autocomplete="off" placeholder="Password">
+                            <svg class="tooltip icon info">
+                                <use href="#info"></use>
+                            </svg>
+                            <label title="passwordHelp" role="tooltip">Password must be more than 5 character and
+                                contain at least 1 lowercase, 1 uppercase, and 1 number</label>
+                        </div>
+                    </div>
+                    <div class="form-check font-content">
+                        <div>
+                            <input (change)="checked($event)" type="checkbox" id="remember">
+                            <label for="remember">Remember Me</label>
+                            <svg class="checkbox icon check">
+                                <use href="#check"></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="signin">
+                        <a (click)="login($event)" class="btn">Sign In</a>
+                    </div>
+                </div>
+                <div class="form-footer font-content">
+                    <div class="pull-left"><a href="page-register.html">Create an Account</a></div>
+                    <div class="pull-right"><a href="page-recover.html">Forgot Password?</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="font-content">
+        <ul class="language">
+            <li><a href="#">Indonesia</a></li>
+            <li><a href="#">English</a></li>
+        </ul>
+        <ul class="policy">
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li>
+                <svg class="icon copyright">
+                    <use href="#copyright"></use>
+                </svg>
+                <span>AIMS <span class="year">2022</span></span>
+            </li>
+        </ul>
+    </footer>
+</section>

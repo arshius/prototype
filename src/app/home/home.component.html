@@ -1,0 +1,42 @@
+<nav class="nav-container">
+    <div (click)="clickNav($event)" class="nav-item purple active"><a href="#">
+            <span class="nav-icon">
+                <svg class="icon space_dashboard">
+                    <use href="#space_dashboard"></use>
+                </svg></span>
+            <span class="nav-label">Menu</span>
+        </a></div>
+    <div (click)="clickNav($event)" class="nav-item blue"><a href="#">
+        <span class="nav-icon">
+            <svg class="icon comments">
+                <use href="#comments"></use>
+            </svg>
+        </span>
+        <span class="nav-label">Chat</span>
+    </a></div>
+    <div (click)="clickNav($event)" class="nav-item green"><a href="#">
+        <span class="nav-icon">
+            <svg class="icon envelope">
+                <use href="#envelope"></use>
+            </svg>
+        </span>
+        <span class="nav-label">Mail</span>
+    </a></div>
+    <div (click)="clickNav($event)" class="nav-item red"><a href="#">
+            <span class="nav-icon">
+                <svg class="icon error">
+                    <use href="#error"></use>
+                </svg>
+            </span>
+            <span class="nav-label">Problem</span>
+        </a></div>
+    <div (click)="clickNav($event)" class="nav-item gray"><a href="#">
+            <span class="nav-icon">
+                <svg class="icon logout">
+                    <use href="#logout"></use>
+                </svg>
+            </span>
+            <span class="nav-label">Sign Out</span>
+        </a></div>
+    <div class="indicator"></div>
+</nav>
